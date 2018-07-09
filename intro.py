@@ -12,5 +12,3 @@
 
 # print(sys.path)
 # '''con eso vemos la ruta donde esta trayendo los modulos '''
-
-asdaf
