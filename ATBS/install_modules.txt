@@ -1,0 +1,29 @@
+
+Abrir CMD para instalar modulos
+
+
+pip install send2trash
+
+pip install requests
+
+pip install beautifulsoup4
+
+pip install selenium
+
+pip install openpyxl == 2.1.4
+
+pip install PyPDF2
+()
+pip install - -upgrade setuptools
+descargar https: // www.lfd.uci.edu / ~gohlke / pythonlibs/  # lxml  y instalar lxml‑4.2.3‑cp37‑cp37m‑win32.whl  lxml‑4.2.3‑cp37‑cp37m‑win_amd64.whl
+pip install python - docx(install python - docx, not docx)
+
+pip install imapclient
+
+pip install pyzmail  # si falla easy_install pyzmail
+
+pip install twilio
+
+pip install pillow
+
+pip install pyautogui

@@ -29,6 +29,3 @@ with open('portal.png', 'rb') as rf:  # Al poner rb, estamos indicando que lea (
         while len(rf_chunk) > 0:  # cuando el largo de nuestro chunk sea mayor a 0, sigue leyendo
             wf.write(rf_chunk)   # copia el pedazo de data que esta en rf_chunk y lo copia al nuevo archivo(wf)
             rf_chunk = rf.read(chunk_size)  # leemos nuevamente el chunk para evitar un loop infinito y leemos el siguiente chunk
-
-# import socket
-# socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect(("localhost", 65334))
