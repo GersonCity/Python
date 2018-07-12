@@ -1,10 +1,10 @@
 # File Objets
 
 # with open('exporta.sql', 'r') as f:  # esto nos permite trabajar con archivos dentro del blocke with, y no nos traemos que preocupar de tener que cerrarlos
-#     # f_contents = f.read()
-#     for line in f:
-#        # f_contents = f.readline()
-#         print(line, end='')
+# f_contents = f.read()
+    for line in f:
+       # f_contents = f.readline()
+        print(line, end='')
 
 # f = open('exporta.sql', 'r')  # 'r'(reading) para leer archivo
 
@@ -16,12 +16,12 @@
 #     f.write('test')
 
 # Crea una copia de una archivo y crea otro.
-# with open('exporta.sql', 'r') as rf: # read file
-#     with open('exporta_copy.sql', 'w') as wf: # write file
-#         for line in rf:     # por cada linea en nuestro archivo original
-#             wf.write(line)  # escibe una linea en wf(exporta_copy)
+with open('exporta.sql', 'r') as rf: # read file
+    with open('exporta_copy.sql', 'w') as wf: # write file
+        for line in rf:     # por cada linea en nuestro archivo original
+            wf.write(line)  # escibe una linea en wf(exporta_copy)
 
-# copiamos una image
+# copiamos una imagen
 with open('portal.png', 'rb') as rf:  # Al poner rb, estamos indicando que lea (r) un byte(b)
     with open('portal_copy.png', 'wb') as wf:  # write file
         chunk_size = 4096   # chunk = pedazo, es decir estamos indicando el tamaño del pedazo(de dato) que vamos a copiar

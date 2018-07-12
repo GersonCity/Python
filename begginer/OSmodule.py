@@ -8,30 +8,31 @@ from datetime import datetime
 os.chdir('/Users/exgciud/Desktop/')  # chdir = change directory
 
 # Para crear un directorio, existen 2 formas
-# os.mkdir('Python_2') # Solo crea el directorio especificado
-# os.makedirs('Python_2/sub_directorio') # crea direcorio y sub directorios si se especifica
+os.mkdir('Python_2') # Solo crea el directorio especificado
+os.makedirs('Python_2/sub_directorio') # crea direcorio y sub directorios si se especifica
 
 # Borrar directorios
-# os.rmdir('Python_2')
-# os.removedirs('Python_2/sub_directorio') # No borra los subdirectorios, solo borra el principal.
+os.rmdir('Python_2')
+os.removedirs('Python_2/sub_directorio') # No borra los subdirectorios, solo borra el principal.
 
-# Renombrar# os.makedirs('Python_2/sub_directorio')
-# os.rename('test.py', 'test_2.py')
+# Renombrar
+os.makedirs('Python_2/sub_directorio')
+os.rename('test.py', 'test_2.py')
 
-# print(os.stat('test_2.py'))  # imprimimos los stats del archivo.
+print(os.stat('test_2.py'))  # imprimimos los stats del archivo.
 
-# mod_time = os.stat('test_2.py').st_mtime
-# print(datetime.fromtimestamp(mod_time))  # imprime la fecha formateada
+mod_time = os.stat('test_2.py').st_mtime
+print(datetime.fromtimestamp(mod_time))  # imprime la fecha formateada
 
-# print(os.getcwd())
-# print(os.listdir()) # Listamos todos los archivos, por defecto lista todo lo de os
+print(os.getcwd())
+print(os.listdir()) # Listamos todos los archivos, por defecto lista todo lo de os
 
 # imprime todo lo que hay en la direccion, Ruta -> directorios -> archivos
-# for dirpath, dirname, filenames in os.walk('/Users/exgciud/Desktop/'):
-#     print('Current Path', dirpath)
-#     print('Directories', dirname)
-#     print('Files', filenames)
-#     print()
+for dirpath, dirname, filenames in os.walk('/Users/exgciud/Desktop/'):
+    print('Current Path', dirpath)
+    print('Directories', dirname)
+    print('Files', filenames)
+    print()
 
 # variables de ambientes
 print(os.environ.get('USERPROFILE'))
