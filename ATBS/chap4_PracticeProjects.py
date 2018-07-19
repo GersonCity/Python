@@ -4,7 +4,7 @@
 
 spam = ['apples', 'bananas', 'tofu', 'cats', 'dogs']
 
-
+# Solucion mia
 def commaCode(formatLista):
 
     popped = formatLista.pop()  # toma el ultimo valor de la lista y lo guarda en una variable
@@ -14,16 +14,22 @@ def commaCode(formatLista):
     result = ', '.join(formatLista)  # Dejo la lista como un string y le agrego comas
     print(result)
 
+commaCode(spam)
 
-# commaCode(spam)
+# Solucion stackoverflow https://stackoverflow.com/questions/38824634/automate-the-boring-stuff-with-python-comma-code)
+
+def comma(items):
+    for i in range(len(items) -2):
+        print(items[i], end=", ")# minor adjustment from one beginner to another: to make it cleaner, simply move the ', ' to equal 'end'. the print statement should finish like this --> end=', '
+    print(items[-2] + ' and ' + items[-1])
+
+comma(spam)
+
+
 
 
 # Character Picture Grid
-    #
-    #
-    #
-    #
-    # Y
+
 grid = [['.', '.', '.', '.', '.', '.'],  # <------- X
         ['.', 'O', 'O', '.', '.', '.'],
         ['O', 'O', 'O', 'O', '.', '.'],
@@ -34,11 +40,18 @@ grid = [['.', '.', '.', '.', '.', '.'],  # <------- X
         ['.', 'O', 'O', '.', '.', '.'],
         ['.', '.', '.', '.', '.', '.']]
 
-corazon = []
-n = len(grid)
-print(n)
 
-for a in grid[x][y]:
-    print(a)
-    for b in grid[x][y]:
-        print(a, b)
+# Solucion 1 ( mi forma algo ajustada de stackoverflow)
+rows = len(grid)
+columns = len(grid[0])
+# print(rows, columns)
+for x in range(columns):
+    for y in range(rows):
+            print(grid[y][x], end='') # comando end es para que en el print no agrege una nueva linea, si no que la haga al lado
+    print() # print blank line
+
+# Solucion 2 ( https://stackoverflow.com/questions/30424355/automate-the-boring-stuff-with-python-chapter-4-exercise)
+for j in range(len(grid[0])):  # Recorre el largo de la primera lista
+    for i in range(len(grid)): # Recorre el total de listas
+        print(grid[i][j],end='')
+    print('')

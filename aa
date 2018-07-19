@@ -1,0 +1,68 @@
+[1mdiff --git a/ATBS/chap4_PracticeProjects.py b/ATBS/chap4_PracticeProjects.py[m
+[1mindex 8eccc2a..3fe1181 100644[m
+[1m--- a/ATBS/chap4_PracticeProjects.py[m
+[1m+++ b/ATBS/chap4_PracticeProjects.py[m
+[36m@@ -4,7 +4,7 @@[m
+ [m
+ spam = ['apples', 'bananas', 'tofu', 'cats', 'dogs'][m
+ [m
+[31m-[m
+[32m+[m[32m# Solucion mia[m
+ def commaCode(formatLista):[m
+ [m
+     popped = formatLista.pop()  # toma el ultimo valor de la lista y lo guarda en una variable[m
+[36m@@ -14,16 +14,22 @@[m [mdef commaCode(formatLista):[m
+     result = ', '.join(formatLista)  # Dejo la lista como un string y le agrego comas[m
+     print(result)[m
+ [m
+[32m+[m[32mcommaCode(spam)[m
+[32m+[m
+[32m+[m[32m# Solucion stackoverflow https://stackoverflow.com/questions/38824634/automate-the-boring-stuff-with-python-comma-code)[m
+[32m+[m
+[32m+[m[32mdef comma(items):[m
+[32m+[m[32m    for i in range(len(items) -2):[m
+[32m+[m[32m        print(items[i], end=", ")# minor adjustment from one beginner to another: to make it cleaner, simply move the ', ' to equal 'end'. the print statement should finish like this --> end=', '[m
+[32m+[m[32m    print(items[-2] + ' and ' + items[-1])[m
+[32m+[m
+[32m+[m[32mcomma(spam)[m
+[32m+[m
+ [m
+[31m-# commaCode(spam)[m
+ [m
+ [m
+ # Character Picture Grid[m
+[31m-    #[m
+[31m-    #[m
+[31m-    #[m
+[31m-    #[m
+[31m-    # Y[m
+[32m+[m
+ grid = [['.', '.', '.', '.', '.', '.'],  # <------- X[m
+         ['.', 'O', 'O', '.', '.', '.'],[m
+         ['O', 'O', 'O', 'O', '.', '.'],[m
+[36m@@ -34,11 +40,18 @@[m [mgrid = [['.', '.', '.', '.', '.', '.'],  # <------- X[m
+         ['.', 'O', 'O', '.', '.', '.'],[m
+         ['.', '.', '.', '.', '.', '.']][m
+ [m
+[31m-corazon = [][m
+[31m-n = len(grid)[m
+[31m-print(n)[m
+ [m
+[31m-for a in grid[x][y]:[m
+[31m-    print(a)[m
+[31m-    for b in grid[x][y]:[m
+[31m-        print(a, b)[m
+[32m+[m[32m# Solucion 1 ( mi forma algo ajustada de stackoverflow)[m
+[32m+[m[32mrows = len(grid)[m
+[32m+[m[32mcolumns = len(grid[0])[m
+[32m+[m[32m# print(rows, columns)[m
+[32m+[m[32mfor x in range(columns):[m
+[32m+[m[32m    for y in range(rows):[m
+[32m+[m[32m            print(grid[y][x], end='') # comando end es para que en el print no agrege una nueva linea, si no que la haga al lado[m
+[32m+[m[32m    print() # print blank line[m
+[32m+[m
+[32m+[m[32m# Solucion 2 ( https://stackoverflow.com/questions/30424355/automate-the-boring-stuff-with-python-chapter-4-exercise)[m
+[32m+[m[32mfor j in range(len(grid[0])):  # Recorre el largo de la primera lista[m
+[32m+[m[32m    for i in range(len(grid)): # Recorre el total de listas[m
+[32m+[m[32m        print(grid[i][j],end='')[m
+[32m+[m[32m    print('')[m
