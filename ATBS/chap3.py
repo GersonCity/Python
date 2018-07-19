@@ -167,3 +167,7 @@ if guess == secretNumber:
     print('Good job! You guessed my number in ' + str(guessesTaken) + ' guesses!')
 else:
     print('Nope. The number I was thinking of was ' + str(secretNumber))
+== == == =
+
+CAMBIOS EN PC DE BCI
+>>>>>> > 714692e21279700074f27fecbd6bf7392d129c4d
