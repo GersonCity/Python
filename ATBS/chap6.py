@@ -105,3 +105,114 @@ while True:
 
 
 # The startswith() and endswith() String Methods
+'Hello world!'.startswith('Hello')
+True
+>> > 'Hello world!'.endswith('world!')
+True
+>> > 'abc123'.startswith('abcdef')
+False
+>> > 'abc123'.endswith('12')
+False
+>> > 'Hello world!'.startswith('Hello world!')
+True
+>> > 'Hello world!'.endswith('Hello world!')
+True
+
+
+# The join() and split() String Methods
+# JOIN llama a una valor string y pasa una lista // split llama a un string y retorna una lista de strings
+
+print(', '.join(['cats', 'rats', 'bats']))
+# 'cats, rats, bats'
+print(' '.join(['My', 'name', 'is', 'Simon']))
+#'My name is Simon'
+print('ABC'.join(['My', 'name', 'is', 'Simon']))
+# 'MyABCnameABCisABCSimon'
+
+print('My name is Simon'.split())
+# ['My', 'name', 'is', 'Simon']
+print('MyABCnameABCisABCSimon'.split('ABC'))
+# ['My', 'name', 'is', 'Simon']
+print('My name is Simon'.split('m'))
+# ['My na', 'e is Si', 'on']
+
+
+spam = '''Dear Alice,
+How have you been? I am fine.
+There is a container in the fridge
+that is labeled "Milk Experiment".
+
+Please do not drink it.
+Sincerely,
+Bob'''
+spam.split('\n')
+'''['Dear Alice,', 'How have you been? I am fine.', 'There is a container in the
+fridge', 'that is labeled "Milk Experiment".', '', 'Please do not drink it.',
+'Sincerely,', 'Bob'] '''
+
+
+# Justifying Text with rjust(), ljust(), and center()
+>> > 'Hello'.rjust(10)
+'     Hello'
+>> > 'Hello'.rjust(20)
+'               Hello'
+>> > 'Hello World'.rjust(20)
+'         Hello World'
+>> > 'Hello'.ljust(10)
+'Hello     '
+
+>> > 'Hello'.rjust(20, '*')
+'***************Hello'
+>> > 'Hello'.ljust(20, '-')
+'Hello---------------'
+
+>> > 'Hello'.center(20)
+'       Hello       '
+>> > 'Hello'.center(20, '=')
+'=======Hello========'
+
+# Ejemplo :
+
+
+def printPicnic(itemsDict, leftWidth, rightWidth):
+    print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+    for k, v in itemsDict.items():
+        print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))
+
+
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+printPicnic(picnicItems, 20, 6)
+
+'''
+---PICNIC ITEMS--
+sandwiches..    4
+apples......   12
+cups........    4
+cookies..... 8000
+-------PICNIC ITEMS-------
+sandwiches..........     4
+apples..............    12
+cups................     4
+cookies.............  8000
+
+'''
+
+# Removing Whitespace with strip(), rstrip(), and lstrip()
+>> > spam = '    Hello World     '
+>> > spam.strip()
+'Hello World'
+>> > spam.lstrip()
+'Hello World '
+>> > spam.rstrip()
+'    Hello World'
+
+>> > spam = 'SpamSpamBaconSpamEggsSpamSpam'
+>> > spam.strip('ampS')
+'BaconSpamEggs'
+
+# Copying and Pasting Strings with the pyperclip Module
+>> > import pyperclip
+>> > pyperclip.copy('Hello world!')
+>> > pyperclip.paste()
+'Hello world!'
