@@ -15,7 +15,7 @@ def commaCode(formatLista):
     print(result)
 
 
-commaCode(spam)
+# commaCode(spam)
 
 # Solucion stackoverflow https://stackoverflow.com/questions/38824634/automate-the-boring-stuff-with-python-comma-code)
 
